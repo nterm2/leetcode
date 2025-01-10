@@ -9,7 +9,8 @@ class Solution:
                 temp_l = nums[:]
                 temp_l.pop(index)
                 second_index = temp_l.index(target - num)
-                second_index = second_index + 1 if second_index >= index else second_index
+                if second_index >= index:
+                    second_index += 1
             except:
                 continue 
             else:
